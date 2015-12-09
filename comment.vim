@@ -17,9 +17,12 @@ let s:languages = {'java': s:comments[0], 'cpp': s:comments[0], 'c': s:comments[
 " Returns:
 "   Nothing. comment is initialized to the appropriate comment or is empty.
 function ReloadComment()
+    let s:comment = s:languages['sh']
     try
         let s:comment = s:languages[expand("%:e")]
     catch /E716:/
+    catch /E713:/
+    catch /E15:/
     endtry
 endfunction
 
