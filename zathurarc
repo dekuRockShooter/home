@@ -1,0 +1,70 @@
+
+set recolor "true"
+set recolor-lightcolor "#252525"
+set recolor-darkcolor "#afafaf"
+
+set default-bg "#252525"
+set default-fg "#AFAFAF"
+
+set adjust-open "width"
+
+unmap a
+unmap d
+unmap f
+unmap gg
+unmap h
+unmap j
+unmap k
+unmap l
+unmap r
+unmap s
+unmap t
+unmap y
+unmap zI
+unmap zI
+unmap zO
+unmap z0
+
+unmap F
+unmap G
+unmap J
+unmap K
+unmap O
+
+unmap ?
+
+unmap <C-b>
+unmap <C-d>
+unmap <C-f>
+unmap <C-i>
+unmap <C-j>
+unmap <C-k>
+unmap <C-m>
+unmap <C-n>
+unmap <C-o>
+unmap <C-t>
+unmap <C-u>
+unmap <C-y>
+
+#map n= zoom n%
+#map +/-/= zoom in/out/original
+#map <F5> fullscreen
+#map <C-r> recolor
+#map R refresh
+#map tab show index and switch to index mode
+#map : enter command
+#map n find next
+#map N find previous
+#map space scroll down a page
+#map S-space scroll up a page
+#map nG go to page n
+#map / find
+#map o open
+map w adjust_window width
+map W adjust_window best-fit
+map [ rotate rotate-ccw
+map ] rotate rotate-cw
+map b toggle_statusbar
+map <Button1> scroll half-up # left click
+map <Button2> toggle_index # scroll click
+map <Button3> scroll half-down # right click
