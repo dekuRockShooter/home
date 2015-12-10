@@ -17,7 +17,8 @@ keymap	C-e	LINE_END
 keymap	C-f	MOVE_RIGHT
 keymap	C-g	LINE_INFO
 keymap	C-h	HISTORY
-keymap	TAB	NEXT_LINK
+keymap	]	NEXT_LINK
+keymap	[	PREV_LINK
 keymap	C-j	GOTO_LINK
 keymap	C-k	COOKIE
 keymap	C-l	REDRAW
@@ -79,8 +80,8 @@ keymap	o	GOTO
 keymap	V	LOAD
 keymap	b	PREV_WORD
 keymap	Z	CENTER_H
-keymap	[	LINK_BEGIN
-keymap	]	LINK_END
+#keymap	[	LINK_BEGIN
+#keymap	]	LINK_END
 keymap	\^	LINE_BEGIN
 keymap	yl	SAVE_LINK
 #keymap	b	PREV_PAGE
