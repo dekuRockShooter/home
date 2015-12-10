@@ -148,11 +148,17 @@
 #def_key "mouse"
 #  mouse_event
 #
-#def_key "up"
-#  scroll_up
+def_key "j"
+    scroll_down
+
+def_key "k"
+    scroll_up
+
+def_key "up"
+  volume_up
 #
-#def_key "down"
-#  scroll_down
+def_key "down"
+  volume_down
 #
 #def_key "["
 #  scroll_up_album
@@ -166,17 +172,17 @@
 #def_key "}"
 #  scroll_down_artist
 #
-#def_key "page_up"
-#  page_up
+def_key "ctrl_b"
+  page_up
 #
-#def_key "page_down"
-#  page_down
+def_key "ctrl_f"
+  page_down
 #
-#def_key "home"
-#  move_home
+def_key "g"
+  move_home
 #
-#def_key "end"
-#  move_end
+def_key "G"
+  move_end
 #
 #def_key "space"
 #  press_space
@@ -184,14 +190,14 @@
 #def_key "enter"
 #  press_enter
 #
-#def_key "delete"
-#  delete_playlist_items
+def_key "d"
+  delete_playlist_items
 #
-#def_key "delete"
-#  delete_browser_items
+def_key "d"
+  delete_browser_items
 #
-#def_key "delete"
-#  delete_stored_playlist
+def_key "d"
+  delete_stored_playlist
 #
 #def_key "right"
 #  next_column
@@ -274,14 +280,14 @@
 #def_key "p"
 #  pause
 #
-#def_key ">"
-#  next
+def_key ">"
+  next
 #
-#def_key "<"
-#  previous
+def_key "<"
+  previous
 #
-#def_key "ctrl_h"
-#  jump_to_parent_directory
+def_key "h"
+  jump_to_parent_directory
 #
 #def_key "ctrl_h"
 #  replay_song
@@ -298,11 +304,11 @@
 #def_key "backspace_2"
 #  replay_song
 #
-#def_key "f"
-#  seek_forward
+def_key "L"
+  seek_forward
 #
-#def_key "b"
-#  seek_backward
+def_key "H"
+  seek_backward
 #
 #def_key "r"
 #  toggle_repeat
@@ -325,8 +331,8 @@
 #def_key "Y"
 #  toggle_replay_gain_mode
 #
-#def_key "t"
-#  toggle_space_mode
+def_key "v"
+  toggle_space_mode
 #
 #def_key "T"
 #  toggle_add_mode
@@ -355,8 +361,8 @@
 #def_key "ctrl_r"
 #  reverse_playlist
 #
-#def_key "ctrl_f"
-#  apply_filter
+def_key "f"
+  apply_filter
 #
 #def_key "/"
 #  find
@@ -370,11 +376,11 @@
 #def_key "?"
 #  find_item_backward
 #
-#def_key "."
-#  next_found_item
+def_key "n"
+  next_found_item
 #
-#def_key ","
-#  previous_found_item
+def_key "N"
+  previous_found_item
 #
 #def_key "w"
 #  toggle_find_mode
@@ -409,8 +415,8 @@
 #def_key "l"
 #  show_lyrics
 #
-#def_key "v"
-#  reverse_selection
+def_key "~"
+  reverse_selection
 #
 #def_key "V"
 #  remove_selection
@@ -463,8 +469,8 @@
 #def_key "o"
 #  jump_to_playing_song
 #
-#def_key "G"
-#  jump_to_browser
+def_key "O"
+  jump_to_browser
 #
 #def_key "G"
 #  jump_to_playlist_editor
