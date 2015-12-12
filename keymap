@@ -62,6 +62,7 @@ keymap	@	READ_SHELL
 #keymap	B	BACK
 keymap	B	TAB_MENU
 keymap	D	DOWNLOAD_LIST
+keymap	d	CLOSE_TAB
 keymap	E	EDIT
 keymap	F	FRAME
 keymap	G	END
