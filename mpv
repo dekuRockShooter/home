@@ -1,0 +1,13 @@
+run mpv [filename]
+
+If there's no video and
+"[vo/vdpau] OSD bitmaps do not fit on a surface with the maximum supported size"
+
+"Exiting... (Quit)
+Inconsistency detected by ld.so: dl-close.c: 771: _dl_close: Assertion `map->l_init_called' failed!
+"
+shows up, run mpv -vo xv [filename]
+
+This tells mpv to use the default (and most compatible) video driver for X.
+
+stream http:// by running mpv "url"
