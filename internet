@@ -1,0 +1,13 @@
+wired:
+0) make sure device has drivers installed by running lspci -v, dmesg | grep [driver]
+1) get device name by running ip link
+2) disable other internet devices by running ip link set [dev] down
+then enable current device by running ip link set [dev] up
+3) connect to internet by running dhcpcd [dev]
+
+get ip and broadcast addresses for currently set device
+by running ip addr show. Also shows ip addr mask
+
+
+wireless:
+run wifi-menu

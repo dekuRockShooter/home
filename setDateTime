@@ -1,0 +1,3 @@
+To change the date and time, run:
+
+timedatectl set-time "2015-09-10 18:40:00" to change the date and time

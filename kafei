@@ -1,0 +1,18 @@
+::NyaaSagashi a1 a2 a3 a4. Filters out whatever you don't want, and saves all that you do.
+
+a1 = search term that the program looks for in the nyaa html file, meaning that the term must be written in its html equivalent form. Most things don't change but some do, such as "http://www.nyaa.se/?page=view&tid=508483" changing to "http://www.nyaa.se/?page=view&#38;tid=508483".
+
+Or a1 can also be "page=n" where 'n' is the page number that the program starts from.
+
+a2 = directory in which to store and look for files.
+
+a3 = remove filter consisting of line separated terms. The program looks for each term in every page and removes all entries that contain the term.
+
+a4 = save filter consisting of line separated terms. The program looks for each term in every page and if an entry contains the current term, its download URL is saved to a seperate Slim file. A term can consist of several sub-terms, separated by '|', all on the same line. This acts as an 'and'. If an entry contains all of the sub-terms, its download URL is saved. Otherwise, even if all but one sub-term is found in an entry, it is treated as a non matching one.
+
+::LetterToMama a1 a2. Searches through all Slim files, recording the link corresponding to the highest term for all shows. Thus if the Slim files contain n shows, ideally there would be n links - one per show, but there might end up being less, depending on the results of NyaaSagashi. There will never be more than n, however.
+
+a1 = number of shows contained in each Slim file. 
+a2 = number of terms contained in each show.
+
+ai and a2 can be ommited, in which case the program will assume 10 shows and 10 terms. If you want to specify the number of terms, but not shows, pass in "0" for a1.

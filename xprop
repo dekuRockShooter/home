@@ -1,0 +1,2 @@
+to get the class name of a window (for configuring it in awesome),
+run xprop and click on the window.

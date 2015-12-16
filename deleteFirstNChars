@@ -1,0 +1,4 @@
+sed 's/^.\{,n\}/m/' substitutes the first n chars of each line with m.
+m can be anything (a long string) or nothing (blank. Effectively delete).
+
+cut -cn- deletes the first n columns of every line

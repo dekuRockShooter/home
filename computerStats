@@ -1,0 +1,2 @@
+network use: /sys/class/net/wlp2s0/statistics
+network: /proc/net/dev
