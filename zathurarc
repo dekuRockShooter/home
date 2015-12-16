@@ -1,0 +1,14 @@
+set font Clean
+set statusbar-fg "red"
+set recolor "true"
+set recolor-lightcolor "#252525"
+set recolor-darkcolor "#afafaf"
+
+set default-bg "#252525"
+set default-fg "#AFAFAF"
+
+set adjust-open "width"
+
+#map <Button1> scroll half-up # left click
+#map <Button2> toggle_index # scroll click
+#map <Button3> scroll half-down # right click
