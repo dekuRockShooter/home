@@ -1,148 +1,347 @@
-simple_preserve_space 0
-gb18030_as_ucs 0
-strict_iso2022 1
-use_jisx0213 0
-use_jisx0212 0
-use_jisx0201k 0
-use_jisc6226 0
-use_jisx0201 0
-use_gb12345_map 0
-fix_width_conv 1
-search_conv 1
-pre_conv 0
-ucs_conv 1
-use_language_tag 1
-east_asian_width 1
-use_combining 1
-use_wide 1
-ext_halfdump 0
-follow_locale 1
-system_charset UTF-8
-auto_detect 2
-document_charset UTF-8
-display_charset UTF-8
-cookie_avoid_wrong_number_of_dots 
-cookie_accept_domains 
-cookie_reject_domains 
-accept_bad_cookie 0
-accept_cookie 1
-show_cookie 0
-use_cookie 1
-ssl_ca_file 
-ssl_ca_path 
-ssl_key_file 
-ssl_cert_file 
-ssl_verify_server 1
-ssl_forbid_method 2, 3
-no_cache 0
-noproxy_netaddr 1
-no_proxy 
-ftp_proxy 
-https_proxy 
-http_proxy 
-use_proxy 1
-max_news 50
-nntpmode 
-nntpserver 
-dns_order 0
-meta_refresh 0
-follow_redirection 10
-default_url 0
-retry_http 1
-argv_is_url 1
-accept_media text/html, text/*;q=0.5, image/*
-accept_encoding gzip, compress, bzip, bzip2, deflate
-accept_language en;q=1.0
-no_referer 0
-user_agent 
-siteconf_file ~/.w3m/siteconf
-pre_form_file ~/.w3m/pre_form
-ftppass_hostnamegen 1
-ftppasswd 
-disable_secret_security_check 0
-passwd_file ~/.w3m/passwd
-use_lessopen 0
-bgextviewer 1
-extbrowser3 
-extbrowser2 
-extbrowser /usr/bin/mozilla
-mailer /usr/bin/mail
-mailto_options 1
-editor /usr/bin/vi
-urimethodmap ~/.w3m/urimethodmap, /usr/etc/w3m/urimethodmap
-mailcap ~/.w3m/mailcap, /usr/etc/w3m/mailcap
-mime_types ~/.mime.types, /usr/etc/mime.types
-index_file 
-cgi_bin 
-personal_document_root 
-document_root 
-keymap_file keymap
-preserve_timestamp 1
-auto_uncompress 0
-decode_cte 0
-clear_buffer 1
-fixed_wheel_scroll_count 5
-relative_wheel_scroll_ratio 30
-relative_wheel_scroll 0
-reverse_mouse 0
-use_mouse 0
-ignorecase_search 1
-wrap_search 0
-mark_all_pages 0
-vi_prec_num 0
-emacs_like_lineedit 0
-mark 0
-close_tab_back 0
-confirm_qq 1
-save_hist 1
-history 100
-use_history 1
-pagerline 10000
-visited_color magenta
-visited_anchor 0
-active_color cyan
-active_style 0
-bg_color terminal
-mark_color cyan
-form_color red
-image_color green
-anchor_color blue
-basic_color terminal
-color 1
-nextpage_topline 0
-label_topline 0
-show_srch_str 1
-show_lnum 0
-fold_line 0
-image_map_list 1
-imgdisplay w3mimgdisplay
-image_scale 100
-ext_image_viewer 1
-max_load_image 4
-auto_image 1
-pseudo_inlines 1
-display_image 1
-view_unseenobject 0
-ignore_null_img_alt 1
-display_ins_del 1
-fold_textarea 0
-display_borders 0
-graphic_char 0
-alt_entity 0
-multicol 0
-dictcommand file:///$LIB/w3mdict.cgi
-use_dictcommand 0
-dirlist_cmd file:///$LIB/dirlist.cgi
-ext_dirlist 1
-display_lineinfo 0
-decode_url 0
-display_link_number 0
-display_link 0
-open_tab_dl_list 0
-open_tab_blank 0
-target_self 0
-frame 0
-pixel_per_line 11
-pixel_per_char 6
-indent_incr 4
-tabstop 4
+####################################################
+## this is example configuration file, copy it to ##
+## ~/.ncmpcpp/config and set up your preferences  ##
+####################################################
+#
+##### connection settings #####
+#
+## set it in order to make tag editor and renaming files work properly
+#
+#mpd_host = "localhost"
+#
+#mpd_port = "6600"
+#
+#mpd_connection_timeout = "5"
+#
+#mpd_crossfade_time = "3"
+#
+##### music visualizer #####
+##
+## Note: In order to make music visualizer work you'll
+## need to use mpd fifo output, whose format parameter
+## has to be set to 44100:16:1. Example configuration:
+## (it has to be put into mpd.conf)
+##
+##audio_output {
+##        type            "fifo"
+##        name            "My FIFO"
+##       path            "/tmp/mpd.fifo"
+##        format          "44100:16:1"
+##}
+##
+#
+#visualizer_fifo_path = "/tmp/mpd.fifo"
+#
+##
+## Note: Below parameter is needed for ncmpcpp
+## to determine which output provides data for
+## visualizer and thus allow syncing between
+## visualization and sound as currently there
+## are some problems with it.
+##
+#
+#visualizer_output_name = "My FIFO"
+#
+##
+## Note: To enable spectrum frequency visualization
+## you need to compile ncmpcpp with fftw3 support.
+##
+#
+#visualizer_type = "spectrum" (spectrum/wave)
+#
+##### system encoding #####
+##
+## ncmpcpp should detect your charset encoding
+## but if it failed to do so, you can specify
+## charset encoding you are using here.
+##
+## Note: You can see whether your ncmpcpp build
+## supports charset detection by checking output
+## of `ncmpcpp --version`.
+##
+## Note: Since MPD uses utf8 by default, setting
+## this option makes sense only if your encoding
+## is different.
+##
+#
+#system_encoding = ""
+#
+##### delays #####
+#
+## delay after playlist highlighting will be disabled (0 = don't disable)
+#
+## defines how long various messages are supposed to be visible
+#
+#message_delay_time = "4"
+#
+##### song format #####
+##
+## for song format you can use:
+##
+## %l - length
+## %f - filename
+## %D - directory
+## %a - artist
+## %t - title
+## %b - album
+## %y - year
+## %n - track number (01/12 -> 01)
+## %N - full track info (01/12 -> 01/12)
+## %g - genre
+## %c - composer
+## %p - performer
+## %d - disc
+## %C - comment
+## $R - begin right alignment
+##
+## you can also put them in { } and then it will be displayed
+## only if all requested values are available and/or define alternate
+## value with { }|{ } eg. {%a - %t}|{%f}
+##
+## Note: Format that is similar to "%a - %t" (i.e. without any additional
+## braces) is equal to "{%a - %t}", so if one of the tags is missing,
+## you'll get nothing.
+##
+## text can also have different color than the main window has,
+## eg. if you want length to be green, write $3%l$9
+##
+## available values:
+##
+## - 0 - default window color (discards all other colors)
+## - 1 - black
+## - 2 - red
+## - 3 - green
+## - 4 - yellow
+## - 5 - blue
+## - 6 - magenta
+## - 7 - cyan
+## - 8 - white
+## - 9 - end of current color
+##
+## Note: colors can be nested.
+##
+#
+#song_list_format = "{%a - }{%t}|{$8%f$9}$R{$3(%l)$9}"
+#
+#song_library_format = "{%n - }{%t}|{%f}"
+#
+#tag_editor_album_format = "{(%y) }%b"
+#
+##
+## Note: Below variables are for alternative version of user's interface.
+## Their syntax supports all tags and colors listed above plus some extra
+## markers used for text attributes. They are followed by character '$'.
+## After that you can put:
+##
+## - b - bold text
+## - u - underline text
+## - r - reverse colors
+## - a - use alternative character set
+##
+## If you don't want to use an attribute anymore, just put it again, but
+## this time insert character '/' between '$' and attribute character,
+## e.g. {$b%t$/b}|{$r%f$/r} will display bolded title tag or filename
+## with reversed colors.
+##
+#
+#alternative_header_first_line_format = "$b$1$aqqu$/a$9 {%t}|{%f} $1$atqq$/a$9$/b"
+#
+#alternative_header_second_line_format = "{{$4$b%a$/b$9}{ - $7%b$9}{ ($4%y$9)}}|{%D}"
+#
+##
+## Note: Below variables also supports
+## text attributes listed above.
+##
+#
+#now_playing_prefix = "$b"
+#
+#now_playing_suffix = "$/b"
+#
+#browser_playlist_prefix = "$4playlist$9 "
+#
+#selected_item_prefix = "$4"
+#
+#selected_item_suffix = "$9"
+#
+## colors are not supported for below variable
+#
+#song_window_title_format = "{%a - }{%t}|{%f}"
+#
+##### columns settings #####
+##
+## syntax of song columns list format is "column column etc."
+##
+## - syntax for each column is:
+##
+## (width of column)[column's color]{displayed tag}
+##
+## Note: Width is by default in %, if you want a column to
+## have fixed size, add 'f' after the value, e.g. (10)[white]{a}
+## will be the column that take 10% of screen (so the real column's
+## width will depend on actual screen size), whereas (10f)[white]{a}
+## will take 10 terminal cells, no matter how wide the screen is.
+##
+## - color is optional (if you want the default one, type [])
+##
+## Note: You can give a column additional attributes by putting appropriate
+## character after displayed tag character. Available attributes are:
+##
+## - r - column will be right aligned
+## - E - if tag is empty, empty tag marker won't be displayed
+##
+## E.g. {lr} will give you right aligned column of lengths.
+##
+#
+#song_columns_list_format = "(7f)[green]{l} (25)[cyan]{a} (40)[]{t} (30)[red]{b}"
+#
+##### various settings #####
+#
+##
+## Note: Custom command that will be executed each
+## time song changes. Useful for notifications etc.
+##
+## Attention: It doesn't support song format anymore.
+## Use `ncmpcpp --now-playing SONG_FORMAT` instead.
+##
+#execute_on_song_change = ""
+#
+#playlist_show_remaining_time = "yes"
+#
+#playlist_display_mode = "columns" (classic/columns)
+#
+#browser_display_mode = "columns" (classic/columns)
+#
+#search_engine_display_mode = "classic" (classic/columns)
+#
+#incremental_seeking = "yes"
+#
+#autocenter_mode = "no"
+#
+#centered_cursor = "no"
+#
+#default_place_to_search_in = "database" (database/playlist)
+#
+#media_library_left_column = "a" (possible values: a,y,g,c,p, legend above)
+#
+#default_find_mode = "wrapped" (wrapped/normal)
+#
+#default_space_mode = "select" (add/select)
+#
+#default_tag_editor_left_col = "albums" (albums/dirs)
+#
+#default_tag_editor_pattern = "%n - %t"
+#
+#header_visibility = "yes"
+#
+#statusbar_visibility = "no"
+#
+#header_text_scrolling = "yes"
+#
+#fancy_scrolling = "yes"
+#
+#cyclic_scrolling = "no"
+#
+#follow_now_playing_lyrics = "no"
+#
+#ncmpc_like_songs_adding = "no" (enabled - add/remove, disabled - always add)
+#
+#show_hidden_files_in_local_browser = "no"
+#
+#clock_display_seconds = "no"
+#discard_colors_if_item_is_selected = "yes"
+#
+#regular_expressions = "basic" (basic/extended)
+#
+##
+## Note: If below is enabled, ncmpcpp will ignore leading
+## "The" word while sorting items in browser, tags in
+## media library, etc.
+##
+#ignore_leading_the = "no"
+#
+#block_search_constraints_change_if_items_found = "yes"
+#
+#mouse_support = "yes"
+#
+#mouse_list_scroll_whole_page = "no"
+#
+#empty_tag_marker = "<empty>"
+#
+#tag_editor_extended_numeration = "no"
+#
+#enable_window_title = "yes"
+#
+##
+## Note: These triggers will allow you to phisically remove
+## files and directories from your hdd in using ncmpcpp's
+## browser screen.
+#
+##### lyrics support #####
+##
+## supported lyrics databases:
+##
+## - 1 - lyricsplugin.com
+##
+#
+#lyrics_database = "1"
+#
+#external_editor = ""
+#
+#use_console_editor = "no" (set to yes, if your editor is console app)
+## - 0 - default window color (discards all other colors)
+## - 1 - black
+## - 2 - red
+## - 3 - green
+## - 4 - yellow
+## - 5 - blue
+## - 6 - magenta
+## - 7 - cyan
+## - 8 - white
+## - 9 - end of current color
+#
+##### colors definitions #####
+#
+#empty_tag_color = "cyan"
+#
+#header_window_color = "default"
+#
+#volume_color = "default"
+#
+#state_flags_color = "default"
+#
+#color1 = "white"
+#|
+#color2 = "green"
+#browser_window_highlight_color = "yellow"
+#
+#statusbar_color = "red"
+#
+#active_column_color = "red"
+#
+#window_border_color = "red"
+#
+#active_window_border = "blue"
+#
+
+mpd_music_dir = "/mnt/SakonsHideout/Q/"
+playlist_disable_highlight_delay = "3"
+song_list_format = "{$3%D/%f $R%l$9}"
+song_status_format = "{{%a{ \"%b\"{ (%y)}} - }{%t}}|{%f}"
+seek_time = 5
+user_interface = alternative
+lines_scrolled = 1
+volume_change_step = 1
+startup_screen = browser
+#display_screens_numbers_on_start = "no"
+regular_expressions = extended
+mouse_support = no
+display_bitrate = yes
+display_remaining_time = yes
+colors_enabled = yes
+state_line_color = red
+main_window_color = red
+main_window_highlight_color = green
+progressbar_color = cyan
+alternative_ui_separator_color = red
+allow_for_physical_item_deletion = yes
+
