@@ -1,2 +1,0 @@
-To find out the filesystem type of some disk, run
-run df -T or mount

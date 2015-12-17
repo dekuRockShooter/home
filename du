@@ -1,5 +1,0 @@
-du --all --total --si > /home/deku/animeTree-2014-04-24
-
-To only show the sizes of the directories one level below the current 
-one, run:
-du --total -h -d1 ./

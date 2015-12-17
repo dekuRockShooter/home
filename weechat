@@ -1,9 +1,0 @@
-run weechat, ignore plugin failures
-
-run /connect irc.rizon.net or wtv server
-then run /join #channel
-
-to change dl directory of dcc transfers, run /set xfer.file.download_path path
-
-to accept dcc transfers, run /set xfer.file.auto_accept_files on, then
-back to off to prevent hackers

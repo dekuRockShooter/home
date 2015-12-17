@@ -1,0 +1,57 @@
+# save as ~/.rtorrent.rc
+
+download_rate = 1000
+upload_rate = 50
+
+min_peers = 50
+max_peers = 100
+
+min_peers_seed = 10
+max_peers_seed = 15
+
+max_uploads = 10
+
+port_range = 6890-6999
+port_random = no
+check_hash = yes
+encryption = allow_incoming,enable_retry,prefer_plaintext
+use_udp_trackers = yes
+dht = auto
+dht_port = 6881
+peer_exchange = yes
+
+# default download directory
+directory = /home/deku/.rDownDefault/
+session = /home/deku/.rDownDefault/session/
+
+#schedule = low_diskspace,5,60,close_low_diskspace=2048M
+
+schedule = \
+watch_directory,0,5,"load=/mnt/SakonsHideout/anime/BD/*.\
+torrent,d.set_directory=/mnt/SakonsHideout/anime/BD/"
+
+#schedule = \
+#watch_directory_2,0,5,"load=/var/run/media/deku/Base/virtual/tera/misc/*.\
+#torrent,d.set_directory=/var/run/media/deku/Base/virtual/tera/misc/"
+
+schedule = \
+watch_directory_3,0,5,"load=/mnt/SakonsHideout/anime/new/*.\
+torrent,d.set_directory=/mnt/SakonsHideout/anime/new/"
+
+schedule = \
+watch_directory_4,0,5,"load=/mnt/SakonsHideout/ongaku/*.\
+torrent,d.set_directory=/mnt/SakonsHideout/ongaku/"
+
+schedule = \
+watch_directory_5,0,5,"load=/mnt/SakonsHideout/pics/*.\
+torrent,d.set_directory=/mnt/SakonsHideout/pics/"
+
+schedule = \
+watch_directory_6,0,5,"load=/mnt/SakonsHideout/anime/Q/*.\
+torrent,d.set_directory=/mnt/SakonsHideout/anime/Q"
+
+schedule = \
+watch_directory_7,0,5,"load_start=/mnt/SakonsHideout/anime/new/MadameAroma/*\
+,d.set_directory=/mnt/SakonsHideout/anime/new/"
+
+schedule = untied_directory,5,5,stop_untied=

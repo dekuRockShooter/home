@@ -1,3 +1,0 @@
-remove all occurances of a char by running tr -d 'x'
-replace all occurences of a char by running tr 'x' 'y'
-replace all occurences of chars by running tr [xyz] 'w'

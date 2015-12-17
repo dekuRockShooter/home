@@ -1,2 +1,0 @@
-To copy local files to a remote server via ssh, use scp:
-scp -r js/ drodri11@52.8.135.18:~/

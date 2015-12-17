@@ -1,0 +1,55 @@
+# CUSTOM REPOSITORY
+To create a custom repository and/or add a package to one (the paths to the
+repository and package need not be the same, but should be in order to avoid
+problems):
+    $ repo-add /path/name.db.tar.gz /path/package.pkg.tar.xz
+
+If the repository is being created, add it to /etc/pacman.conf and sync it:
+    /etc/pacman.conf
+    [name]
+    SigLevel = TrustAll
+    Server = file:///path
+
+    $ sudo pacman -Sy
+
+To remove a package from a custom repository:
+    $ repo-remove /path/name.db.tar.gz /path/package.pkg.tar.xz
+
+#INSTALLING A LOCAL PACKAGE
+To install a local package name.pkg.tar.xz:
+    $ sudo pacman -U name.pkg.tar.xz
+
+#ROLLBACK
+To rollback the system to an earlier date:
+    /etc/pacman.d/mirrorlist
+    # Comment everything except the following line
+    Server=http://ala.seblu.net/repos/2014/03/30/$repo/os/$arch
+
+    $ sudo pacman -Syyuu
+
+    # Now revert the mirrorlist to its original form.
+
+#OFFLINE PACKAGE INSTALLATION
+First, download the most recent versions of the repositories. Choose a mirror
+from /etc/pacman.d/mirrorlist to get the database from, then repeat the
+following for all repositories (ie, core, extra, community, etc):
+    $ wget mirror_url/archlinux/$repo/os/$arch/$repo.db
+
+Move the databases to /var/lib/pacman/sync in the offline machine:
+    $ mv /mnt/*.db /var/lib/pacman/sync/
+
+The first line will produce a list of links to every dependency of a given
+package that is not already installed. The second produces a list of links
+for packages that need to be updated. Run one in the offline machine:
+    $ sudo pacman -Sp pkg_name > dependency_list # install a new package
+    $ sudo pacman -Sup --noconfirm > update_list # update old packages
+
+In an online machine, download all of the packages from the list of links:
+    $ wget -P /download/path/ -i list_of_links
+
+Finally, install all of the packages in the offline machine. Whether to run
+line 2 or 3 depends on if a single package is being installed or the system
+is being updated:
+    $ mv /mnt/*.pkg.tar.xz /var/cache/pacman/pkg
+    $ sudo pacman -S package_name
+    $ sudo pacman -Su

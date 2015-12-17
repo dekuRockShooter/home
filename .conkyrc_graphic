@@ -1,0 +1,121 @@
+# Conky, a system monitor, based on torsmo
+#
+# Any original torsmo code is licensed under the BSD license
+#
+# All code written since the fork of torsmo is licensed under the GPL
+#
+# Please see COPYING for details
+#
+# Copyright (c) 2004, Hannu Saransaari and Lauri Hakkarainen
+# Copyright (c) 2005-2010 Brenden Matthews, Philip Kovacs, et. al. (see AUTHORS)
+# All rights reserved.
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+
+own_window yes
+own_window_type desktop
+own_window_hints below,skip_taskbar,skip_pager
+
+alignment top_left
+background no
+border_width 1
+cpu_avg_samples 2
+default_color white
+default_outline_color white
+default_shade_color white
+draw_borders no
+draw_graph_borders yes
+draw_outline no
+draw_shades no
+use_xft no
+#xftfont DejaVu Sans Mono:size=10
+#font -schumacher-*-medium-r-*-*-10-*-*-*-*-60-*-*
+#font -schumacher-*-medium-r-*-*-12-*-*-*-*-60-*-*
+#font -lucy-*-*-*-*-*-11-*-*-*-*-*-*-*
+#font -gohu-*-*-*-*-*-11-*-*-*-*-*-*-*
+#font -windows-dina-*-*-*-*-13-*-*-*-*-*-*-*
+#font -windows-montecarlo-*-*-*-*-11-*-*-*-*-*-*-*
+font -*-profont-*-*-*-*-11-*-*-*-*-*-*-*
+#font -*-tamsyn-*-*-*-*-12-*-*-*-*-*-*-*
+
+#font -*-speedy-*-*-*-*-11-*-*-*-*-*-*-*
+#font -*-progsole-*-*-*-*-11-*-*-*-*-*-*-*
+#font -*-proggytiny-*-*-*-*-*-*-*-*-*-*-*-*
+#font -*-proggysquare-*-*-*-*-*-*-*-*-*-*-*-*
+
+#font -*-proggysmall-*-*-*-*-*-*-*-*-*-*-*-*
+#font -*-proggyopti-*-*-*-*-*-*-*-*-*-*-*-*
+#font -*-proggyopti-*-*-*-*-*-*-*-*-*-*-*-*
+#font -*-proggysquare-*-*-*-*-*-*-*-*-*-*-*-*
+#font -*-proggyclean-*-*-*-*-*-*-*-*-*-*-*-*
+#font -*-coding font tobi-*-*-*-*-*-*-*-*-*-*-*-*
+#font -*-haxrcorp s8-*-*-*-*-*-*-*-*-*-*-*-*
+gap_x 1
+gap_y 30
+minimum_size 180 300
+maximum_width 600
+top_name_width 10
+net_avg_samples 2
+no_buffers yes
+out_to_console no
+out_to_stderr no
+extra_newline no
+own_window yes
+own_window_class Conky
+own_window_type desktop
+stippled_borders 0
+update_interval 1.0
+uppercase no
+use_spacer none
+show_graph_scale no
+show_graph_range no
+double_buffer yes
+
+TEXT
+${color}${time %A, %d %B}${alignr}${time  %H:%M}
+$nodename - $sysname $kernel on $machine
+$hr
+${color grey}Uptime:$color $uptime | ${color grey}Frequency:$color $freq MHz
+
+#CPU temp: ${acpitemp}C # use this if cpu's temp is measured through acpi
+CPU temp: ${hwmon 1 temp 1}C # use this if cpu's temp is measured through pci
+${color grey}CPU: $cpu% (${top name 1} ${top cpu 1})
+${cpugraph cpu0 50,300 00AAAA 880000, scale -t}
+
+${color grey}RAM: $mem/$memmax (${top_mem name 1} ${top_mem mem 1})
+${memgraph 10,100 00AAAA 880000, scale -t}
+
+${color grey}Swap:$color $swap/$swapmax
+$hr
+${color grey}Networking:
+Total Up: ${totalup wlp2s0} | Total Down: ${totaldown wlp2s0}
+Up:$color ${upspeedf wlp2s0} ${color grey}     Down:$color ${downspeedf wlp2s0}
+${upspeedgraph wlp2s0 20,100 00AAAA 880000 scale -t} ${downspeedgraph wlp2s0 20,100 00AAAA 880000 scale -t}
+$hr
+Arch R/W: ${diskio_read /dev/sda1}/ ${diskio_write /dev/sda1} \
+            Ongaku R/W: ${diskio_read /dev/sda5}/ ${diskio_write /dev/sda5}
+${diskiograph_read /dev/sda1 30,60 00AAAA 880000 scale -t} ${diskiograph_write /dev/sda1 30,60 00AAAA 880000 scale -t} \
+      ${diskiograph_read /dev/sda5 30,60 00AAAA 880000 scale -t} ${diskiograph_write /dev/sda5 30,60 00AAAA 880000 scale -t}
+
+Pics R/W: ${diskio_read /dev/sda6}/ ${diskio_write /dev/sda6} \
+            Anime R/W: ${diskio_read /dev/sda7}/ ${diskio_write /dev/sda7}
+${diskiograph_read /dev/sda6 30,60 00AAAA 880000 scale -t} ${diskiograph_write /dev/sda6 30,60 00AAAA 880000 scale -t} \
+      ${diskiograph_read /dev/sda7 30,60 00AAAA 880000 scale -t} ${diskiograph_write /dev/sda7 30,60 00AAAA 880000 scale -t}
+
+$hr
+${color grey}File systems:
+Arch $color${fs_used /}/${fs_size /} ${fs_bar 6 /}
+${color grey}Ongaku $color${fs_used /mnt/SakonsHideout/ongaku}/${fs_size /mnt/SakonsHideout/ongaku} ${fs_bar 6 /mnt/SakonsHideout/ongaku}
+${color grey}Pics $color${fs_used /mnt/SakonsHideout/pics}/${fs_size /mnt/SakonsHideout/pics} ${fs_bar 6 /mnt/SakonsHideout/pics}
+${color grey}Anime $color${fs_used /mnt/SakonsHideout/anime}/${fs_size /mnt/SakonsHideout/anime} ${fs_bar 6 /mnt/SakonsHideout/anime}

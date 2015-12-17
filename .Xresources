@@ -1,0 +1,34 @@
+*toolbar: false
+*scrollBar: false
+*borderWidth: 0
+*VT100.geometry: 80x24
+*selectToClipboard: true
+*locale: true
+!*faceNameDoublesize:Fixed:style=ja
+! DELETE
+!*font: -*-Dina-*-*-*-*-*-*-*-*-*-*-*-*
+!*font: -*-Inconsolata-*-*-*-*-*-*-*-*-*-*-*-*
+!*font: -*-haxrcorp s8-*-*-*-*-*-*-*-*-*-*-*-*
+!*font: -*-Coding Font Tobi-*-*-*-*-*-*-*-*-*-*-*-*
+!*font: -*-Opti.pcf-*-*-*-*-10.625-*-*-*-*-*-*-*
+!
+!*font: -*-Tamsyn-*-*-*-*-*-*-*-*-*-*-*-*
+!*font: -lucy-Tewi-*-*-*-*-*-*-*-*-*-*-*-*
+*font: -*-MonteCarlo-*-*-*-*-*-*-*-*-*-*-*-*
+!*font: -Gohu-GohuFont-*-*-*-*-*-*-*-*-*-*-*-*
+!*font: -*-ProFont-*-*-*-*-11-*-*-*-*-*-*-*
+!*font: -Schumacher-Clean-*-*-*-*-8-*-*-*-*-*-*-*
+*wideFont: -misc-fixed-medium-r-normal-ja-*-*-*-*-*-*-*-*
+*allowBoldFonts: false
+URxvt.boldFont:
+!
+! colors
+*background: rgb:00/00/00
+*foreground: rgb:98/98/98
+! text on light bg (gray)
+! color bold text instead of bolding them
+*colorBDMode: true
+*colorBD: rgb:82/a4/d3
+! color underline text instead of underlining them
+*colorULMode: true
+*colorUL: rgb:e4/e4/e4

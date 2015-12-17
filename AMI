@@ -1,9 +1,0 @@
-read the README. Do what it says after downloading qt5-base
-
-Place Sybil.db, calendar.ini, and settings.ini in the same folder
-as the executable. Start by running ./AMI -style=gtk
-
-To use another database, just replace the current one with the other.
-Everything will be blank at first. To show the lists corresponding
-to the new database, just rename the lists to those from the new
-database's tables.

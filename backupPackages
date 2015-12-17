@@ -1,3 +1,0 @@
-backup packages by running: sudo pacman -Qqen > pkglist.txt
-copy the pkglist.txt to an arch installation and install
-the packages by running sudo pacman -S $(< pkglist.txt)

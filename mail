@@ -1,8 +1,0 @@
-send mail by installing ssmpt then configuring /etc/ssmtp/ssmtp.conf and
-/etc/ssmtp/revaliases. Then run mail.
-
-receive mail by configuring getmail (see ~./.getmail/getmailrc. All that is needed at first is getmailrc and a directory to save mail to along with the three subdirectories within it). and then running getmail -q.
-
--q = quiet
-
-save attachments using metamail or mpack

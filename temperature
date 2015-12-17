@@ -1,3 +1,0 @@
-This file stores the temperature of the cpu.
-Divide by 1000 to get the temperature in degrees Celsius.
-cat /sys/class/thermal/thermal_zone0/temp

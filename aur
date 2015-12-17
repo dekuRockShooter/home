@@ -1,5 +1,0 @@
-How to install a package from the AUR
-
-1) download the tarball from the AUR
-2) extract the tarball by running tar -xvf pkgname.tar.gz
-3) run makepkg -sri

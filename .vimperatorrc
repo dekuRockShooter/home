@@ -1,0 +1,11 @@
+" read topics 14 and 15 in the help page
+colorscheme darkness
+set autocomplete=false
+set gui=none
+set hls
+set noincsearch
+set noscrollbars
+hi! StatusLine color:red; background-color:black;
+hi! CmdLine color:red; background-color:black;
+hi! CompItem color:red; background-color:black;
+hi! CompItem[selected] color:black; background-color:red;

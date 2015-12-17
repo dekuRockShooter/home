@@ -1,7 +1,0 @@
-# updating pacman database to match that of the latest repository
-
-1) pacman -Syyu
-
-2)
-pacman -Rdd archlinux-keyring
-pacman -Syyu archlinux-keyring

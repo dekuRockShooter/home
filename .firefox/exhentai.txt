@@ -1,0 +1,34 @@
+log into e-hentai.org, copy member_id, pass, uconfig names and values
+1) edit site preferences
+2) cookies
+
+create:
+server = exhentai.org
+
+In firefox, use Cookies Manager. Go to exhentai 4 times, each time
+filling in (in the new exhentai cookie that gets created with every visit) the 
+name and content fields with the name and value fields below. So in total, 
+there should be 4 cookies for exhentai, each with the values held below.
+
+1)
+name = ipb_member_id
+value = 1114535
+only sent to creater = no
+version = 0
+
+2)
+name = ipb_pass_hash
+value = b19479f1f80f9b9952ad61ee03d94ac5
+only sent to creater = no
+
+3)
+name = lv
+value = 1373856853-1373936367
+only sent to creater = yes
+version = 0
+
+4)
+name = uconfig
+value = tl_m-uh_y-rc_0-cats_0-ts_m-tr_1-prn_y-dm_l-rx_0-ry_0-xns_0-sa_y-oi_n-qb_n-tf_n-hp_-hk_-xl_
+only sent to creater = no
+version = 0

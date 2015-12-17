@@ -1,2 +1,0 @@
-for mounting ntfs partitions and being able to read/write to them
-Mount the partition by running (as root) ntfs-3g /dev/ntfsPartition /mnt/

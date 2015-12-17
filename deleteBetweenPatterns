@@ -1,5 +1,0 @@
-run sed '/pattern1/,/pattern2/d' file to delete the lines between (inclusive)
-the patterns
-
-run sed '1,/pattern1/d;/pattern2/,$d' file to extract (exclusive) the lines
-between the patterns

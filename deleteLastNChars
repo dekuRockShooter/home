@@ -1,2 +1,0 @@
-sed 's/.\{n\}$/m/' substitutes the last n chars of each line with m.
-m can be anything (a long string) or nothing (blank. Effectively delete).

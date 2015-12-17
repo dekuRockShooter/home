@@ -1,0 +1,5 @@
+#minute  hour  day_of_month  month  day_of_week command
+0,30 7-12 * * * /home/deku/Programs/NyaaSagashi/Kafei.sh
+1 9-13 * * * /home/deku/Programs/NyaaSagashi/SongOfSoaring.sh
+2 9,11,13 * * * /home/deku/scripts/SpecialDeliveryToMama.sh
+0 14 * * * /home/deku/scripts/moveToFolder.sh

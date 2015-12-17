@@ -1,0 +1,5 @@
+concatenate files by running cat file >> fileToConcatenateTo
+concatenate output by running cmd >> fileToConcatenateTo
+
+> = overwrite
+>> = append

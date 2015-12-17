@@ -1,0 +1,4 @@
+Extract vundle.zip into this directory and rename the root folder to
+Vundle.vim:
+    $ unzip vundle.zip
+    $ mv Vundle.vim-master Vundle.vim 

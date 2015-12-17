@@ -1,6 +1,0 @@
-in terminal: xev
-Then press any button to show its name
-Useful for finding the name of a key for key mapping
-
-add to ~.xinitrc like in the following:
-xmodmap -e "keycode 115 = Super_L" -e "add mod4 = Super_L"

@@ -1,0 +1,20 @@
+wget [-c] [-i f] "url" [-O f] [-P d]
+
+-c = save download progress in case it gets interrupted
+-i = download line separated links from the specified file. Omit "url"
+-O = save as the specified filename 'f'
+-P = save to the specified directory 'd'
+
+wget -m -k -K -E http://www.gnu.org/ -o /home/me/weeklog
+Creates a mirror of the website
+
+wget --mirror --relative --no-parent --html-extension \
+--convert-links -p -U Mozilla --wait=60 --limit-rate=20K \
+-D myanimelist.net "http://myanimelist.net" -e robots=off
+
+-p = save all media shown in the page
+-U x = have wget be identified as browser x
+--wait=x = wait x seconds between page retrievals
+--limit-rate-x = limit download speed to x bytes
+-D x = only download files within domain x
+-e robots=off = fool sites protected against automated download tools
