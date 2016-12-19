@@ -106,7 +106,7 @@ bg_color terminal
 mark_color cyan
 form_color red
 image_color green
-anchor_color blue
+anchor_color cyan
 basic_color terminal
 color 1
 nextpage_topline 0
