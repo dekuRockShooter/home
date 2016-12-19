@@ -1,0 +1,4 @@
+Dependencies: none
+To change the brightness, run:
+    $ tee /sys/class/backlight/intel_backlight/brightness <<< x
+where x is a number between 0 and /.../intel_backlight/max_brightness
