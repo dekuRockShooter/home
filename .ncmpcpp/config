@@ -323,7 +323,7 @@
 #active_window_border = "blue"
 #
 
-mpd_music_dir = "/mnt/SakonsHideout/Q/"
+mpd_music_dir = "/mnt/SakonsHideout/ongaku/"
 playlist_disable_highlight_delay = "3"
 song_list_format = "{$3%D/%f $R%l$9}"
 song_status_format = "{{%a{ \"%b\"{ (%y)}} - }{%t}}|{%f}"
