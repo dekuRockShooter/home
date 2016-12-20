@@ -1,0 +1,1 @@
+bspwm: set _JAVA_AWT_WM_NONREPARENTING=1 in /etc/profile.d/jre.sh
