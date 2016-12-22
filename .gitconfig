@@ -1,5 +1,21 @@
 [user]
-	name = dekuRockShooter
-	email = dekuRockShooter@gmail.com
+    name = dekuRockShooter
+    email = dekuRockShooter@gmail.com
 [core]
-	editor = vim
+    editor = vim
+[alias]
+    l = log --oneline --decorate --graph --all
+    s = status
+    ss = status -s
+    c = commit
+    cm = commit -m
+    bvv = branch -vv
+    b = branch
+    bd = branch -d
+    bnm = branch --no-merged
+    bm = branch --merged
+	ch = checkout
+	f = fetch --all
+	p = push
+	m = merge
+	a = add
