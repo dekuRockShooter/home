@@ -1,0 +1,24 @@
+# glob regex
+.w3m/cookie
+.w3m/history
+*w3mtmp*
+*w3mcache*
+*mozilla*
+*viminfo*
+*xorg/
+*.xbel
+.java/
+.lesshst
+*.swp
+*.swo
+.cache/
+.bash_profile
+.bash_logout
+.bash_history
+.android/
+.Xauthority
+.AndroidStudio*/
+*dconf/
+*.tmp
+code/
+.gradle/
