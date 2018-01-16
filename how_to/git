@@ -1,0 +1,30 @@
+Send changes to the local_branch to the remote repository:
+    $ git push origin local_branch
+
+Add a remote repository:
+    $ git remote add origin repo.git
+
+See difference between local and remote branch:
+    $ git branch -v
+
+Clone a repository in a nonempty directory:
+    $ git init .
+    $ git remote add -t \* -f origin repo.git
+    $ git checkout master
+
+Overwrite files during a merge:
+    $ git reset --hard origin/branch
+
+Delete a remote branch:
+    $ git pull origin --delete branch
+
+Combine two commits into one:
+Source: http://stackoverflow.com/questions/2563632/how-can-i-merge-two-commits-into-one
+    $ git rebase --interactive HEAD~2
+    # In the editor, squash the second commit; that is, replace 'pick' with 's'
+    pick older_commit msg
+    pick newer_commit msg -> s newer_commit msg
+    # After save-quitting, a new editor starts where you can edit the message.
+
+Create an alias (this makes git dc equivalent to git diff --cached):
+    $ git config --global alias.dc 'diff --cached'

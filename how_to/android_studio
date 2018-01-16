@@ -1,0 +1,2 @@
+"Problem occurred starting process 'command .../aapt'":
+    Change the build-tools version to the latest in the sdk in gradle.build

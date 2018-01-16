@@ -1,0 +1,17 @@
+-Use fragments as much as possible, and make them as modular as possible.
+
+-If a fragment doesn't fit in the current activity, then make a new activity
+that holds the fragment in a FrameLayout.  Call this with an Intent.
+
+-Pass initial values to fragments not with a constructor, but with a static
+getInstance method.  Use setArguments to pass the values to the fragment.
+
+-onCreate for fragments is for initializing data, not views.  Use getArguments
+to get data passed via the static initializer.
+
+-onCreateView for fragments is for initiazling the views.
+
+-onAttach for fragments makes available the associated context (activity).
+Check that it implements an interface here.
+
+-Extend DialogFragment to show a custom dialog.

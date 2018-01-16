@@ -1,0 +1,7 @@
+Spellcheck with:
+    $ hunspell -d en_US file # the default dictionary is en_US
+
+If no dictionary can be found (Can't open affix or dictionary files for
+dictionaty names "en_US"), then download dictionary and affix files, en_US.dic
+and en_US.aff, and put it in any directory listed in hunspell -D (for example,
+~/.openoffice.org/3/user/workbook).
