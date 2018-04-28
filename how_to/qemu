@@ -1,0 +1,19 @@
+Intall Ubuntu 16.04:
+    # Create the file in which the OS is installed [1].
+    qemu-img create ubuntu_test 16G
+
+    # Install the OS [1], [2].
+    qemu-system-x86_64 -hda ubuntu_test -cdrom ~/ubuntu.iso\
+        -boot d -m 2000 -enable-kvm
+
+    # Run the OS.  The installation reboots when done, then nothing happens.
+    # At that point, press ctrl+alt+shift+2 [2] and enter 'quit'.
+    qemu-system-x86_64 -hda ubuntu_test -boot d -m 2000 -enable-kvm
+
+    # This lets the VM access a USB device connected to localhost.
+    # The last two numbers are found using lsusb.
+    qemu-system-x86_64 -hda ubuntu_test -boot d -m 2000 -enable-kvm -usbdevice host:0781:5581
+
+References:
+[1] https://www.unixmen.com/how-to-install-and-configure-qemu-in-ubuntu/
+[2] https://wiki.archlinux.org/index.php/QEMU#Running_virtualized_system
