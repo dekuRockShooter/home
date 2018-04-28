@@ -1,0 +1,13 @@
+Installation
+    $ sudo apt-get install uim uim-pinyin uim-anthy
+
+Config files are in ~/.uim.d/.
+
+~/.xinitrc:
+    export GTK_IM_MODULE=uim
+    export QT_IM_MODULE=uim
+    export XMODIFIERS=@im=uim
+    uim-xim &
+
+ctrl+space selects input method
+shift+space toggles the input method
