@@ -1,0 +1,3 @@
+javac -classpath .:jsoup-1.11.3.jar Lab.java
+java -classpath .:jsoup-1.11.3.jar Lab
+java -classpath .:jsoup-1.11.3.jar Lab <html><body><div class='entry'><div class='2'>lol2</                div><div class='1'>lol1</div></div><div class='entry'><div class='2'>lol2</          div><div class='1'>lol1</div></div></body></html>
