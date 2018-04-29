@@ -64,5 +64,61 @@ Import and export data [1]:
     $ echo 10 20 30 >> test.txt
 
 
+Lab 2: Stream processing [2]
+
+    Start ZooKeeper and Kafka.
+    $ ./bin/zookeeper-server-start.sh config/zookeeper.properties
+    $ ./bin/kafka-server-start.sh config/server.properties
+
+    Create input and output topics.
+    $ ./bin/kafka-topics.sh --create --zookeeper localhost:2181\
+        --replication-factor 1 --partitions 1 --topic streams-plaintext-input
+    $ ./bin/kafka-topics.sh --create --zookeeper localhost:2181\
+        --replication-factor 1 --partitions 1 --topic streams-wordcount-output
+
+    Start the stream processor.
+    $ ./bin/ksfka-run-class.sh\
+        org.apache.kafka.streams.examples.wordcount.WordCountDemo
+
+    # Send messages to the input topic from stdin.
+    $ ./bin/kafka-console-producer.sh --broker-list localhost:9092\
+        --topic streams-plaintext-input
+    # Or use a file connector that sends data to streams-plaintext-input.
+    $ ./bin/connect-standalone.sh config/connect-standalone.properties\
+        config/connect-file-source.properties
+
+    See the processed messages.
+    $ ./bin/kafka-console-consumer.sh --bootstrap-server localhost:9092\
+        --topic streams-wordcount-output --from-beginning\
+        --formatter kafka.tools.DefaultMessageFormatter\
+        --property print.key=true\
+        --property print.value=true\
+        --property key.deserializer=org.apache.kafka.common.serialization.StringDeserialize\
+        --property value.deserializer=org.apache.kafka.common.serialization.LongDeserializer
+
+    Create a stream processor from scratch [3].
+    $ mvn archetype:generate \
+        -DarchetypeGroupId=org.apache.kafka \
+        -DarchetypeArtifactId=streams-quickstart-java \
+        -DarchetypeVersion=1.1.0 \
+        -DgroupId=streams.examples \
+        -DartifactId=streams.examples \
+        -Dversion=0.1 \
+        -Dpackage=myapps
+
+    Start the stream processor [3].
+    $ mvn clean package
+    $ mvn exec:java -Dexex.mainCLass=myapps.Pipe
+
+    To deploy the processor, start the following processes:
+    1) ZooKeeper (section Install Kafka and ZooKeeper)
+    2) Kafka (section Install Kafka and ZooKeeper)
+    3) A producer/connector that publishes to the stream's input topic (section Import and export data, section Send and receive messages about a topic)
+    4) A consumer/connector that subscribes to the stream's output topic (section Import and export data, section Send and receive messages about a topic)
+    5) A stream processor (section Stream Processing)
+
+
 References:
 [1] https://kafka.apache.org/quickstart
+[2] https://kafka.apache.org/11/documentation/streams/quickstart
+[3] https://kafka.apache.org/11/documentation/streams/tutorial
