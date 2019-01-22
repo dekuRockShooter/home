@@ -1,0 +1,5 @@
+genisoimage -J -R -V gapipdeps -o gapipdeps.iso ga_dependencies.tar
+wodim gapipdeps.iso
+
+mkisofs -o myiso.iso ./myfiles
+wodim -eject myiso.iso
