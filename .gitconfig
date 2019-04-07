@@ -19,3 +19,8 @@
 	p = push
 	m = merge
 	a = add
+	chb = checkout -b
+	d = diff
+	dc = diff --cached
+	ca = commit --amend
+	lf = l --follow
