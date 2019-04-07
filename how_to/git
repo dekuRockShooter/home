@@ -28,3 +28,11 @@ Source: http://stackoverflow.com/questions/2563632/how-can-i-merge-two-commits-i
 
 Create an alias (this makes git dc equivalent to git diff --cached):
     $ git config --global alias.dc 'diff --cached'
+
+List all local and remote branches:
+    $ git branch -a # May need to git fetch -a to get all remote branches.
+
+Create a local branch that tracks a remote branch (this means the local branch
+is a local version of the remote branch that keeps track of changes between
+the two):
+    $ git branch <local name> --track origin/<remote name>

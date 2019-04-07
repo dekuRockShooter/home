@@ -4,4 +4,5 @@
 
 2)
 pacman -Rdd archlinux-keyring
+pacman-key --refresh-keys
 pacman -Syyu archlinux-keyring
