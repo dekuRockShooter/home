@@ -7,8 +7,9 @@ super + Return
 	urxvt
 
 # program launcher
-#super + @space
-#	dmenu_run
+super + @space
+        echo "$(date) | $(cat /sys/class/power_supply/BAT0/uevent | grep 'POWER_SUPPLY_CAPACITY=' | grep -o -E '[0-9]+')" | dmenu
+
 
 # make sxhkd reload its configuration files:
 super + Escape
