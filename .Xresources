@@ -7,6 +7,7 @@
 !*faceNameDoublesize:Fixed:style=ja
 ! DELETE
 !*font: -*-Dina-*-*-*-*-*-*-*-*-*-*-*-*
+!*font: -*-Dina-*-*-*-*-*-*-*-*-*-*-*-*
 !*font: -*-Inconsolata-*-*-*-*-*-*-*-*-*-*-*-*
 !*font: -*-haxrcorp s8-*-*-*-*-*-*-*-*-*-*-*-*
 !*font: -*-Coding Font Tobi-*-*-*-*-*-*-*-*-*-*-*-*
@@ -14,10 +15,10 @@
 !
 !*font: -*-Tamsyn-*-*-*-*-*-*-*-*-*-*-*-*
 !*font: -lucy-Tewi-*-*-*-*-*-*-*-*-*-*-*-*
-*font: -*-MonteCarlo-*-*-*-*-*-*-*-*-*-*-*-*
-!*font: -Gohu-GohuFont-*-*-*-*-*-*-*-*-*-*-*-*
+!*font: -*-MonteCarlo-*-*-*-*-*-*-*-*-*-*-*-*
+*font: -Gohu-GohuFont-*-*-*-*-14-*-*-*-*-*-*-*
 !*font: -*-ProFont-*-*-*-*-11-*-*-*-*-*-*-*
-!*font: -Schumacher-Clean-*-*-*-*-8-*-*-*-*-*-*-*
+!*font: -Schumacher-Clean-*-*-*-*-14-*-*-*-*-*-*-*
 *wideFont: -misc-fixed-medium-r-normal-ja-*-*-*-*-*-*-*-*
 *allowBoldFonts: false
 URxvt.boldFont:

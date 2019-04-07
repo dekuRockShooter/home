@@ -1,4 +1,4 @@
-21
+22
 08-Schumacher-Clean.pcf.gz -schumacher-clean-medium-r-normal--8-80-75-75-c-60-iso10646-1
 DinaMedium10.pcf.gz -windows-dina-medium-r-normal--16-100-96-96-c-80-microsoft-cp1252
 HaxrCorpS8-12.pcf.gz -fontforge-haxrcorp s8-normal-r-normal--12-90-96-96-p-52-winroman-0
@@ -19,4 +19,5 @@ Tewi-normal-11.pcf.gz -lucy-tewi-medium-r-normal--11-90-75-75-p-58-iso10646-1
 cft.pcf.gz -freetype-coding font tobi-medium-r-normal--16-120-96-96-p-48-iso10646-1
 gohufont-11.pcf.gz -gohu-gohufont-medium-r-normal--11-80-100-100-c-60-iso8859-1
 gohufont-uni-11.pcf.gz -gohu-gohufont-medium-r-normal--11-80-100-100-c-60-iso10646-1
+gohufont-uni-14.pcf.gz -gohu-gohufont-medium-r-normal--14-100-100-100-c-80-iso10646-1
 progsole-10.pcf.gz -fontforge-progsole-medium-r-normal--10-100-75-75-c-60-iso8859-1
