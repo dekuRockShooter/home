@@ -1,0 +1,43 @@
+Start the docker deamon:
+    $ sudo systemctl start docker.service
+
+
+The Dockerfile file contains instructions for how to create an image.  It is
+located in the root of the context.  Images are built from files rooted at a
+given path (this is the context).  When building, the context is sent to the
+deamon.
+
+FROM x: sets the initial image from which to build.
+
+RUN x: executes the command within the current image's environment.
+Any side-effects caused by the command are incorporated into the image
+and are seen by subsequent instructions.  Each RUN instruction effectively
+produces a new image that can be built and run as a container.  They
+are analogous to commits in source control.
+
+CMD x: set the command to execute when the image is started.
+
+LABEL x: add metadata to the image.
+
+EXPOSE x: specifies which port the application listens to.
+
+ENV x: sets an environment variable.  This is visible to all subsequent images.
+
+ADD x: copies all files from the source directory to a directory in the
+image's filesystem.
+
+COPY x: copies all files from the source directory to a directory in the
+container's filesystem.
+
+ENTRYPOINT x: configure the container if it is an executable.
+
+VOLUME x: creates a mount point for filesystems external to the container.
+
+WORKDIR x: sets the working directory for RUN, CMD, ENTRYPOINT, COPY, and
+ADD instructions.
+
+ARG x: defines command line arguments passed to 'docker build --build-arg'.
+
+References:
+https://docs.docker.com/engine/reference/builder/
+

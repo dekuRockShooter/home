@@ -1,0 +1,1 @@
+diff -s --color=always -u -d -Z -E f1 f2 | less -r

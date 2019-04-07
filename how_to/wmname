@@ -1,0 +1,2 @@
+When the GUI for a java application shows nothing but a grey window, run:
+    $ wmname LG3D

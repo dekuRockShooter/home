@@ -1,0 +1,17 @@
+MAVEN
+1) Make a new Maven java application project.
+2) In the "Name and Location" menu, group Id is com.deku, and Package is
+com.deku.stuff.
+
+This will make a project rooted at the given directory.  The pom.xml file
+is the project's configuration file.
+
+After building, run the app by executing the following in the terminal:
+    $ java -cp target/project_name.jar com.pkg.LauncherClass
+
+To build in the command line, run
+    $ mvn clean # Remove any cached data from the previous build.
+    $ mvn compile
+
+To put compiled code in a JAR, run
+    $ mvn package

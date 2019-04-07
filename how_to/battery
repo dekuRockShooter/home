@@ -1,0 +1,16 @@
+CHECK BATTERY LEVEL
+ENERGY_FULL/ENERGY_FULL_DESIGN shows how much the battery has degraded
+throughout its lifetime.  CAPACITY is the current charge level.  STATUS
+is either 'charging' or 'unknown' (AC).  This assumes the main battery
+is BAT0.
+
+    $ cat /sys/class/power_supply/BAT0/uevent
+
+
+SET CHARGE THRESHOLDS
+Set the level at which to start and stop charging, assuming the main
+battery is BAT0.  This makes charging start when the charge is less than
+40%, and stop when the charge is over 80%.  Charges in between make the
+computer run on AC.
+
+    $ tlp setcharge 40 80 BAT0
