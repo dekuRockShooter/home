@@ -8,6 +8,10 @@
 XDG_CONFIG_HOME="$HOME/.config"
 
 # Generated with http://bashrcgenerator.com/.
-export PS1="\[\033[38;5;10m\]\u\[$(tput sgr0)\]@\[$(tput sgr0)\]\[\033[38;5;10m\]\h\[$(tput sgr0)\]:\[$(tput sgr0)\]\[\033[38;5;13m\]\w\[$(tput sgr0)\]\\$ \[$(tput sgr0)\]"
+export PS1="\u@\h:\w\\$ \[$(tput sgr0)\]"
 
-export LS_COLORS=$LS_COLORS:'di=0;95:'
+alias ls='ls --color=always'
+
+# Colors can be found here:
+# https://askubuntu.com/questions/466198/how-do-i-change-the-color-for-directories-with-ls-in-the-console
+export LS_COLORS=$LS_COLORS:'di=0;97:'
