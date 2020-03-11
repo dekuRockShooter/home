@@ -14,10 +14,11 @@
 !
 !*font: -*-Tamsyn-*-*-*-*-*-*-*-*-*-*-*-*
 !*font: -lucy-Tewi-*-*-*-*-*-*-*-*-*-*-*-*
-*font: -*-MonteCarlo-*-*-*-*-*-*-*-*-*-*-*-*
+!*font: -*-MonteCarlo-*-*-*-*-*-*-*-*-*-*-*-*
 !*font: -Gohu-GohuFont-*-*-*-*-*-*-*-*-*-*-*-*
 !*font: -*-ProFont-*-*-*-*-11-*-*-*-*-*-*-*
 !*font: -Schumacher-Clean-*-*-*-*-8-*-*-*-*-*-*-*
+*font: -*-*-*-*-*-20-*-*-*-*-*-*-*
 *wideFont: -misc-fixed-medium-r-normal-ja-*-*-*-*-*-*-*-*
 *allowBoldFonts: false
 URxvt.boldFont:
