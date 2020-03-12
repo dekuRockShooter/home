@@ -120,3 +120,7 @@ super + alt + shift + {h,j,k,l}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-10 0,0 10,0 -10,10 0}
+
+# Rotate all nodes.
+super + {_,shift + }r
+	bspc node @/ --rotate {+,-}90
